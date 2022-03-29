@@ -17,7 +17,6 @@ const displayContent = () => {
   const tasks = document.querySelector('#taskList');
   //   tasks.innerHTML = '';
   taskList.forEach((element) => {
-    console.log(element);
     tasks.innerHTML += `
           <div class="border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${element.id}>
             <div class="form-check mb-0 d-flex align-items-center justify-content-start">

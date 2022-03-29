@@ -528,25 +528,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/module/test-01.js":
-/*!*******************************!*\
-  !*** ./src/module/test-01.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function test() {
-  console.log('testing......');
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (test);
-
-
 /***/ })
 
 /******/ 	});
@@ -625,8 +606,6 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-/* harmony import */ var _module_test_01_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/test-01.js */ "./src/module/test-01.js");
-
 
 
 const taskList = [
@@ -672,4 +651,4 @@ displayContent();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlef15b96a11299aebe9772.js.map
+//# sourceMappingURL=bundle4eb323c94462ea041d56.js.map
