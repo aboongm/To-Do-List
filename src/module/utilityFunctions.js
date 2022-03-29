@@ -25,4 +25,16 @@ const displayContent = () => {
   });
 };
 
-export { displayContent };
+const checkLocalStorage = () => {
+  if (JSON.parse(localStorage.getItem('TASKS_LIST')) != null) {
+    Task.BooksObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
+    displayContent();
+  }
+};
+
+const addTask = () => {
+  Task.add(Elements.taskInput);
+  checkLocalStorage();
+};
+
+export { displayContent, addTask, checkLocalStorage };
