@@ -37,4 +37,4 @@ const addTask = () => {
   checkLocalStorage();
 };
 
-export { displayContent, addTask, checkLocalStorage };
+export { Task, addTask, checkLocalStorage };

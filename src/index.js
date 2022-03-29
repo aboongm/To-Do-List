@@ -1,9 +1,14 @@
 import './styles/style.css';
 
-import { displayContent, addTask, checkLocalStorage } from './module/utilityFunctions.js';
+import { Task, addTask, checkLocalStorage } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
 
 Elements.submitInput.addEventListener('click', addTask);
+Elements.refreshTask.addEventListener('click', (e) => {
+  Task.TaskObject = [];
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  checkLocalStorage();
+});
 
 document.addEventListener('DOMContentLoaded', checkLocalStorage);
 
