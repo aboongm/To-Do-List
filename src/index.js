@@ -1,7 +1,8 @@
 import './styles/style.css';
-
+/* eslint-disable */
 import { Task, addTask, removeTask, checkLocalStorage } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
+/* eslint-enable */
 
 Elements.submitInput.addEventListener('click', addTask);
 
@@ -28,7 +29,7 @@ Elements.taskList.addEventListener('click', (e) => {
       item.children[2].classList.add('hide');
       item.classList.remove('bg-yellow');
     }
-    if (index === parseInt(e.target.getAttribute('data-id'))) {
+    if (index === parseInt(e.target.getAttribute('data-id'), 10)) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
@@ -42,10 +43,10 @@ Elements.taskList.addEventListener('click', (e) => {
       });
     }
 
-    if (
-      item.children[0].children[1].children[0] === e.target &&
-      !e.target.parentElement.parentElement.parentElement.classList.contains('bg-yellow')
-    ) {
+    const descriptionItem = item.children[0].children[1].children[0];
+    const targetItem = e.target.parentElement.parentElement.parentElement;
+
+    if (descriptionItem === e.target && !targetItem.classList.contains('bg-yellow')) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
@@ -53,19 +54,21 @@ Elements.taskList.addEventListener('click', (e) => {
   });
 
   const taskItem = e.target.parentElement.parentElement.parentElement;
-  let editDescription = e.target.innerText;
-  Task.TaskObject.forEach((obj) => {
-    if (obj.id === parseInt(taskItem.getAttribute('data-id'))) {
-      obj.description = editDescription;
-    }
-    localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
-  });
+  const editDescription = e.target.innerText;
+  if (parseInt(taskItem.getAttribute('data-id'), 10) !== 0) {
+    Task.TaskObject.forEach((obj) => {
+      if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
+        obj.description = editDescription;
+      }
+      localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+    });
+  }
 });
 
 document.addEventListener('click', (e) => {
   e.preventDefault();
-  [...Elements.taskList.children].forEach((item, index) => {
-    const isClickInsideTaskList = taskList.contains(e.target);
+  [...Elements.taskList.children].forEach((item) => {
+    const isClickInsideTaskList = Elements.taskList.contains(e.target);
     if (!isClickInsideTaskList) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');

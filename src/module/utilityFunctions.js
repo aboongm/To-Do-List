@@ -1,5 +1,5 @@
-import Task from './Task';
-import * as Elements from './constElements';
+import Task from './Task.js';
+import * as Elements from './constElements.js';
 
 const displayContent = () => {
   Elements.taskList.innerHTML = '';
@@ -35,6 +35,12 @@ const addTask = () => {
   checkLocalStorage();
 };
 
+const reorderTaskObjectId = (obj) => {
+  obj.forEach((item, index) => {
+    item.id = index;
+  });
+};
+
 const removeTask = (element) => {
   Task.remove(element);
   reorderTaskObjectId(Task.TaskObject);
@@ -42,10 +48,6 @@ const removeTask = (element) => {
   checkLocalStorage();
 };
 
-const reorderTaskObjectId = (obj) => {
-  obj.forEach((item, index) => {
-    item.id = index;
-  });
-};
-
+/* eslint-disable */
 export { Task, addTask, removeTask, checkLocalStorage };
+/* eslint-enable */
