@@ -33,16 +33,29 @@ Elements.taskList.addEventListener('click', (e) => {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
-      // console.log(item.children[2]);
       item.children[2].addEventListener('click', (e) => {
-        // console.log(item.children[2].children[0]);
-        // console.log(e.target);
         if (item.children[2].children[0] === e.target) {
           removeTask(e.target.parentElement.parentElement);
         } else {
           removeTask(e.target.parentElement);
         }
       });
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  console.log(e.target);
+
+  [...Elements.taskList.children].forEach((item, index) => {
+    const isClickInsideTaskList = taskList.contains(e.target);
+    console.log(isClickInsideTaskList);
+    if (!isClickInsideTaskList) {
+      console.log(item.children[1]);
+      console.log(item.children[2]);
+      item.children[1].classList.remove('hide');
+      item.children[2].classList.add('hide');
+      item.classList.remove('bg-yellow');
     }
   });
 });
