@@ -35,3 +35,11 @@ ul {
 .bg-yellow {
   background-color: rgb(255, 254, 196);
 }
+
+input:focus {
+  outline: none;
+}
+
+span:focus {
+  outline: none;
+}
