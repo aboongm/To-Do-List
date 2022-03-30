@@ -8,8 +8,8 @@ const displayContent = () => {
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
                 <input class="checkBox form-check-input border" type="checkbox" value="" id="">
-                <label class="form-check-label p-3 m-0" for="">
-                  <span class="h5 m-0 p-0">${obj.description}</span>
+                <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="">
+                  <span class="h5 m-0 p-0" contenteditable=true>${obj.description}</span>
                 </label>
               </div>
               <button class="three-dots h5 btn m-0 icon">
