@@ -21,7 +21,7 @@ Elements.refreshTask.addEventListener('click', (e) => {
 });
 
 Elements.taskList.addEventListener('click', (e) => {
-  e.preventDefault();
+  e.stopPropagation();
 
   [...Elements.taskList.children].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
@@ -57,7 +57,6 @@ Elements.taskList.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-  e.preventDefault();
   [...Elements.taskList.children].forEach((item) => {
     const isClickInsideTaskList = Elements.taskList.contains(e.target);
     if (!isClickInsideTaskList) {

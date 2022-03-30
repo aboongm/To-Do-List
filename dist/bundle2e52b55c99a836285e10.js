@@ -597,7 +597,9 @@ const clearCompletedTasks = document.querySelector('#clear-completed');
 const threeDots = document.querySelector('.three-dots');
 const trash = document.querySelector('.trash');
 
+/* eslint-disable */
 
+/* eslint-enable */
 
 
 /***/ }),
@@ -610,24 +612,25 @@ const trash = document.querySelector('.trash');
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Task": () => (/* reexport safe */ _Task__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   "Task": () => (/* reexport safe */ _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"]),
 /* harmony export */   "addTask": () => (/* binding */ addTask),
 /* harmony export */   "checkLocalStorage": () => (/* binding */ checkLocalStorage),
+/* harmony export */   "editTask": () => (/* binding */ editTask),
 /* harmony export */   "removeTask": () => (/* binding */ removeTask)
 /* harmony export */ });
-/* harmony import */ var _Task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Task */ "./src/module/Task.js");
-/* harmony import */ var _constElements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constElements */ "./src/module/constElements.js");
+/* harmony import */ var _Task_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Task.js */ "./src/module/Task.js");
+/* harmony import */ var _constElements_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constElements.js */ "./src/module/constElements.js");
 
 
 
 const displayContent = () => {
-  _constElements__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML = '';
-  _Task__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject.forEach((obj) => {
-    _constElements__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML += `
+  _constElements_js__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML = '';
+  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject.forEach((obj) => {
+    _constElements_js__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
-                <input class="checkBox form-check-input border" type="checkbox" value="" id="">
-                <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="">
+                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault checked">                
+                <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
                   <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
                 </label>
               </div>
@@ -644,20 +647,13 @@ const displayContent = () => {
 
 const checkLocalStorage = () => {
   if (JSON.parse(localStorage.getItem('TASKS_LIST')) != null) {
-    _Task__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
+    _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
     displayContent();
   }
 };
 
 const addTask = () => {
-  _Task__WEBPACK_IMPORTED_MODULE_0__["default"].add(_constElements__WEBPACK_IMPORTED_MODULE_1__.taskInput);
-  checkLocalStorage();
-};
-
-const removeTask = (element) => {
-  _Task__WEBPACK_IMPORTED_MODULE_0__["default"].remove(element);
-  reorderTaskObjectId(_Task__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject);
-  localStorage.setItem('TASKS_LIST', JSON.stringify(_Task__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
+  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].add(_constElements_js__WEBPACK_IMPORTED_MODULE_1__.taskInput);
   checkLocalStorage();
 };
 
@@ -667,7 +663,29 @@ const reorderTaskObjectId = (obj) => {
   });
 };
 
+const removeTask = (element) => {
+  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].remove(element);
+  reorderTaskObjectId(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject);
+  localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
+  checkLocalStorage();
+};
 
+const editTask = (target) => {
+  const taskItem = target.parentElement.parentElement.parentElement;
+  const editDescription = target.innerText;
+  if (parseInt(taskItem.getAttribute('data-id'), 10) !== null) {
+    _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject.forEach((obj) => {
+      if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
+        obj.description = editDescription;
+      }
+      localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
+    });
+  }
+};
+
+/* eslint-disable */
+
+/* eslint-enable */
 
 
 /***/ })
@@ -751,9 +769,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/utilityFunctions.js */ "./src/module/utilityFunctions.js");
 /* harmony import */ var _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/constElements.js */ "./src/module/constElements.js");
 
+/* eslint-disable */
 
 
-
+/* eslint-enable */
 
 _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.submitInput.addEventListener('click', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.addTask);
 
@@ -774,15 +793,13 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.refreshTask.addEventListen
 _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener('click', (e) => {
   e.preventDefault();
 
-  // const taskDynamic = document.querySelectorAll('.taskDynamic');
-  // [...taskDynamic].forEach((item, index) => {
   [..._module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.children].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
       item.classList.remove('bg-yellow');
     }
-    if (index === parseInt(e.target.getAttribute('data-id'))) {
+    if (index === parseInt(e.target.getAttribute('data-id'), 10)) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
@@ -795,23 +812,24 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener(
         }
       });
     }
-    // description click
-    if (item.children[0].children[1] === e.target && !e.target.parentElement.parentElement.parentElement.classList.contains('bg-yellow')) {
-      console.log('checking');
-      // item.children[1].classList.add('hide');
-      // item.children[2].classList.remove('hide');
-      // item.classList.add('bg-yellow');
+
+    const descriptionItem = item.children[0].children[1].children[0];
+    const targetItem = e.target.parentElement.parentElement.parentElement;
+
+    if (descriptionItem === e.target && !targetItem.classList.contains('bg-yellow')) {
+      item.children[1].classList.add('hide');
+      item.children[2].classList.remove('hide');
+      item.classList.add('bg-yellow');
     }
-    console.log(item.children[0].children[1].children[0]);
-    // console.log(e.target.parentElement.parentElement.parentElement);
-    // console.log(item.classList);
   });
+
+  (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.editTask)(e.target);
 });
 
 document.addEventListener('click', (e) => {
-  e.preventDefault();
-  [..._module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.children].forEach((item, index) => {
-    const isClickInsideTaskList = taskList.contains(e.target);
+  e.stopPropagation();
+  [..._module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.children].forEach((item) => {
+    const isClickInsideTaskList = _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.contains(e.target);
     if (!isClickInsideTaskList) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
@@ -820,21 +838,10 @@ document.addEventListener('click', (e) => {
   });
 });
 
-// Elements.taskList.addEventListener('dblclick', (e) => {
-//   e.preventDefault();
-//   // console.log(e.target);
-//   [...Elements.taskList.children].forEach((item, index) => {
-//     if (index === parseInt(e.target.getAttribute('data-id'))) {
-//       // console.log(item, index);
-//       // console.log(item.innerText);
-//     }
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.checkLocalStorage);
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle9d20583e3ac19317288c.js.map
+//# sourceMappingURL=bundle2e52b55c99a836285e10.js.map
