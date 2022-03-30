@@ -1,7 +1,8 @@
 import './styles/style.css';
-/* eslint-disable */
 import { Task, addTask, removeTask, checkLocalStorage, editTask } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
+
+/* eslint-disable */
 /* eslint-enable */
 
 Elements.submitInput.addEventListener('click', addTask);
