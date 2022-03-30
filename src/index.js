@@ -1,6 +1,6 @@
 import './styles/style.css';
 
-import { Task, addTask, checkLocalStorage } from './module/utilityFunctions.js';
+import { Task, addTask, removeTask, checkLocalStorage } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
 
 Elements.submitInput.addEventListener('click', addTask);
@@ -18,41 +18,33 @@ Elements.refreshTask.addEventListener('click', (e) => {
   checkLocalStorage();
 });
 
+Elements.taskList.addEventListener('click', (e) => {
+  console.log(e.target.getAttribute('data-id'));
+
+  const taskDynamic = document.querySelectorAll('.taskDynamic');
+  // console.log(typeof e.target.getAttribute('data-id'));
+  [...taskDynamic].forEach((item, index) => {
+    if (item.classList.contains('bg-yellow')) {
+      item.children[1].classList.remove('hide');
+      item.children[2].classList.add('hide');
+      item.classList.remove('bg-yellow');
+    }
+    if (index === parseInt(e.target.getAttribute('data-id'))) {
+      item.children[1].classList.add('hide');
+      item.children[2].classList.remove('hide');
+      item.classList.add('bg-yellow');
+      // console.log(item.children[2]);
+      item.children[2].addEventListener('click', (e) => {
+        // console.log(item.children[2].children[0]);
+        // console.log(e.target);
+        if (item.children[2].children[0] === e.target) {
+          removeTask(e.target.parentElement.parentElement);
+        } else {
+          removeTask(e.target.parentElement);
+        }
+      });
+    }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', checkLocalStorage);
-
-// const taskList = [
-//   {
-//     index: 0,
-//     description: 'wash the dish',
-//     completed: false,
-//   },
-//   {
-//     index: 1,
-//     description: 'complete to do list project',
-//     completed: false,
-//   },
-// ];
-
-// const displayContent = () => {
-//   const tasks = document.querySelector('#taskList');
-//   taskList.forEach((element) => {
-//     tasks.innerHTML += `
-//           <div class="border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${element.id}>
-//             <div class="form-check mb-0 d-flex align-items-center justify-content-start">
-//               <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault">
-//               <label class="form-check-label p-3 m-0" for="flexCheckDefault">
-//                 <span class="h5 m-0 p-0">${element.description}</span>
-//               </label>
-//             </div>
-//             <button id="three-dots" class="h5 btn m-0 icon">
-//               <i class="fa-solid fa-ellipsis-vertical"></i>
-//             </button>
-//             <button id="trash" class="h5 btn m-0 icon hide">
-//               <i class="fa-solid fa-trash-can"></i>
-//             </button>
-//           </div>
-//         `;
-//   });
-// };
-
-// displayContent();

@@ -31,3 +31,7 @@ ul {
 .hide {
   display: none;
 }
+
+.bg-yellow {
+  background-color: rgb(255, 254, 196);
+}

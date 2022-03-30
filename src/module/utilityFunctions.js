@@ -2,11 +2,9 @@ import Task from './Task';
 import * as Elements from './constElements';
 
 const displayContent = () => {
-  const taskList = document.querySelector('#taskList');
-  taskList.innerHTML = '';
-
+  Elements.taskList.innerHTML = '';
   Task.TaskObject.forEach((obj) => {
-    taskList.innerHTML += `
+    Elements.taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
                 <input class="checkBox form-check-input border" type="checkbox" value="" id="">
@@ -37,4 +35,8 @@ const addTask = () => {
   checkLocalStorage();
 };
 
-export { Task, addTask, checkLocalStorage };
+const removeTask = (element) => {
+  Task.remove(element);
+};
+
+export { Task, addTask, removeTask, checkLocalStorage };
