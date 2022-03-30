@@ -54,8 +54,8 @@ Elements.taskList.addEventListener('click', (e) => {
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
     if (
-      !targetItem.classList.contains('bg-yellow')
-      && descriptionItem === e.target
+      !targetItem.classList.contains('bg-yellow') &&
+      descriptionItem === e.target
     ) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
