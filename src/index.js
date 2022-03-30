@@ -22,8 +22,9 @@ Elements.refreshTask.addEventListener('click', (e) => {
 Elements.taskList.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const taskDynamic = document.querySelectorAll('.taskDynamic');
-  [...taskDynamic].forEach((item, index) => {
+  // const taskDynamic = document.querySelectorAll('.taskDynamic');
+  // [...taskDynamic].forEach((item, index) => {
+  [...Elements.taskList.children].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
@@ -42,6 +43,15 @@ Elements.taskList.addEventListener('click', (e) => {
         }
       });
     }
+
+    if (
+      item.children[0].children[1].children[0] === e.target &&
+      !e.target.parentElement.parentElement.parentElement.classList.contains('bg-yellow')
+    ) {
+      item.children[1].classList.add('hide');
+      item.children[2].classList.remove('hide');
+      item.classList.add('bg-yellow');
+    }
   });
 });
 
@@ -56,5 +66,16 @@ document.addEventListener('click', (e) => {
     }
   });
 });
+
+// Elements.taskList.addEventListener('dblclick', (e) => {
+//   e.preventDefault();
+//   // console.log(e.target);
+//   [...Elements.taskList.children].forEach((item, index) => {
+//     if (index === parseInt(e.target.getAttribute('data-id'))) {
+//       // console.log(item, index);
+//       // console.log(item.innerText);
+//     }
+//   });
+// });
 
 document.addEventListener('DOMContentLoaded', checkLocalStorage);

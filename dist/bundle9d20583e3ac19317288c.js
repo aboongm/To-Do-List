@@ -564,7 +564,6 @@ class Task {
       this.TaskObject.splice(element.getAttribute('data-id'), 1);
     }
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
-    console.log('from task: ', this.TaskObject);
   }
 }
 
@@ -629,7 +628,7 @@ const displayContent = () => {
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
                 <input class="checkBox form-check-input border" type="checkbox" value="" id="">
                 <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="">
-                  <span class="h5 m-0 p-0" contenteditable=true>${obj.description}</span>
+                  <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
                 </label>
               </div>
               <button class="three-dots h5 btn m-0 icon">
@@ -775,8 +774,9 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.refreshTask.addEventListen
 _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const taskDynamic = document.querySelectorAll('.taskDynamic');
-  [...taskDynamic].forEach((item, index) => {
+  // const taskDynamic = document.querySelectorAll('.taskDynamic');
+  // [...taskDynamic].forEach((item, index) => {
+  [..._module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.children].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
@@ -795,6 +795,16 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener(
         }
       });
     }
+    // description click
+    if (item.children[0].children[1] === e.target && !e.target.parentElement.parentElement.parentElement.classList.contains('bg-yellow')) {
+      console.log('checking');
+      // item.children[1].classList.add('hide');
+      // item.children[2].classList.remove('hide');
+      // item.classList.add('bg-yellow');
+    }
+    console.log(item.children[0].children[1].children[0]);
+    // console.log(e.target.parentElement.parentElement.parentElement);
+    // console.log(item.classList);
   });
 });
 
@@ -810,10 +820,21 @@ document.addEventListener('click', (e) => {
   });
 });
 
+// Elements.taskList.addEventListener('dblclick', (e) => {
+//   e.preventDefault();
+//   // console.log(e.target);
+//   [...Elements.taskList.children].forEach((item, index) => {
+//     if (index === parseInt(e.target.getAttribute('data-id'))) {
+//       // console.log(item, index);
+//       // console.log(item.innerText);
+//     }
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.checkLocalStorage);
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle1c5722e58d3909c8f992.js.map
+//# sourceMappingURL=bundle9d20583e3ac19317288c.js.map

@@ -9,7 +9,7 @@ const displayContent = () => {
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
                 <input class="checkBox form-check-input border" type="checkbox" value="" id="">
                 <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="">
-                  <span class="h5 m-0 p-0" contenteditable=true>${obj.description}</span>
+                  <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
                 </label>
               </div>
               <button class="three-dots h5 btn m-0 icon">
