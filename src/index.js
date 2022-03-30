@@ -22,8 +22,6 @@ Elements.refreshTask.addEventListener('click', (e) => {
 Elements.taskList.addEventListener('click', (e) => {
   e.preventDefault();
 
-  // const taskDynamic = document.querySelectorAll('.taskDynamic');
-  // [...taskDynamic].forEach((item, index) => {
   [...Elements.taskList.children].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
@@ -53,6 +51,15 @@ Elements.taskList.addEventListener('click', (e) => {
       item.classList.add('bg-yellow');
     }
   });
+
+  const taskItem = e.target.parentElement.parentElement.parentElement;
+  let editDescription = e.target.innerText;
+  Task.TaskObject.forEach((obj) => {
+    if (obj.id === parseInt(taskItem.getAttribute('data-id'))) {
+      obj.description = editDescription;
+    }
+    localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  });
 });
 
 document.addEventListener('click', (e) => {
@@ -66,16 +73,5 @@ document.addEventListener('click', (e) => {
     }
   });
 });
-
-// Elements.taskList.addEventListener('dblclick', (e) => {
-//   e.preventDefault();
-//   // console.log(e.target);
-//   [...Elements.taskList.children].forEach((item, index) => {
-//     if (index === parseInt(e.target.getAttribute('data-id'))) {
-//       // console.log(item, index);
-//       // console.log(item.innerText);
-//     }
-//   });
-// });
 
 document.addEventListener('DOMContentLoaded', checkLocalStorage);
