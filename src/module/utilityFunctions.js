@@ -61,7 +61,11 @@ const editTask = (target) => {
   }
 };
 
-export { Task, addTask, removeTask, checkLocalStorage, editTask };
-
-/* eslint-disable */
-/* eslint-enable */
+export {
+  Task,
+  displayContent,
+  addTask,
+  removeTask,
+  checkLocalStorage,
+  editTask,
+};

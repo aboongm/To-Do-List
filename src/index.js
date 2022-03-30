@@ -1,5 +1,11 @@
 import './styles/style.css';
-import { Task, addTask, removeTask, checkLocalStorage, editTask } from './module/utilityFunctions.js';
+import {
+  Task,
+  addTask,
+  removeTask,
+  checkLocalStorage,
+  editTask,
+} from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
 
 /* eslint-disable */
@@ -47,7 +53,10 @@ Elements.taskList.addEventListener('click', (e) => {
     const descriptionItem = item.children[0].children[1].children[0];
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
-    if (descriptionItem === e.target && !targetItem.classList.contains('bg-yellow')) {
+    if (
+      !targetItem.classList.contains('bg-yellow')
+      && descriptionItem === e.target
+    ) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
