@@ -22,7 +22,6 @@ class Task {
       this.TaskObject.splice(element.getAttribute('data-id'), 1);
     }
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
-    console.log('from task: ', this.TaskObject);
   }
 }
 
