@@ -25,7 +25,7 @@ const displayContent = () => {
 
 const checkLocalStorage = () => {
   if (JSON.parse(localStorage.getItem('TASKS_LIST')) != null) {
-    Task.BooksObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
+    Task.TaskObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
     displayContent();
   }
 };
@@ -37,6 +37,15 @@ const addTask = () => {
 
 const removeTask = (element) => {
   Task.remove(element);
+  reorderTaskObjectId(Task.TaskObject);
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  checkLocalStorage();
+};
+
+const reorderTaskObjectId = (obj) => {
+  obj.forEach((item, index) => {
+    item.id = index;
+  });
 };
 
 export { Task, addTask, removeTask, checkLocalStorage };

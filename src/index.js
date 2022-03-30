@@ -13,16 +13,16 @@ Elements.taskInput.addEventListener('keypress', (event) => {
 });
 
 Elements.refreshTask.addEventListener('click', (e) => {
+  e.preventDefault();
   Task.TaskObject = [];
   localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
   checkLocalStorage();
 });
 
 Elements.taskList.addEventListener('click', (e) => {
-  console.log(e.target.getAttribute('data-id'));
+  e.preventDefault();
 
   const taskDynamic = document.querySelectorAll('.taskDynamic');
-  // console.log(typeof e.target.getAttribute('data-id'));
   [...taskDynamic].forEach((item, index) => {
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
@@ -34,6 +34,7 @@ Elements.taskList.addEventListener('click', (e) => {
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
       item.children[2].addEventListener('click', (e) => {
+        e.preventDefault();
         if (item.children[2].children[0] === e.target) {
           removeTask(e.target.parentElement.parentElement);
         } else {
@@ -45,14 +46,10 @@ Elements.taskList.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-  console.log(e.target);
-
+  e.preventDefault();
   [...Elements.taskList.children].forEach((item, index) => {
     const isClickInsideTaskList = taskList.contains(e.target);
-    console.log(isClickInsideTaskList);
     if (!isClickInsideTaskList) {
-      console.log(item.children[1]);
-      console.log(item.children[2]);
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
       item.classList.remove('bg-yellow');
