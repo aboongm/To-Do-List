@@ -1,6 +1,6 @@
 import './styles/style.css';
 /* eslint-disable */
-import { Task, addTask, removeTask, checkLocalStorage } from './module/utilityFunctions.js';
+import { Task, addTask, removeTask, checkLocalStorage, editTask } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
 /* eslint-enable */
 
@@ -53,16 +53,7 @@ Elements.taskList.addEventListener('click', (e) => {
     }
   });
 
-  const taskItem = e.target.parentElement.parentElement.parentElement;
-  const editDescription = e.target.innerText;
-  if (parseInt(taskItem.getAttribute('data-id'), 10) !== 0) {
-    Task.TaskObject.forEach((obj) => {
-      if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
-        obj.description = editDescription;
-      }
-      localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
-    });
-  }
+  editTask(e.target);
 });
 
 document.addEventListener('click', (e) => {

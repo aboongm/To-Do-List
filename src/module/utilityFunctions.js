@@ -48,6 +48,19 @@ const removeTask = (element) => {
   checkLocalStorage();
 };
 
+const editTask = (target) => {
+  const taskItem = target.parentElement.parentElement.parentElement;
+  const editDescription = target.innerText;
+  if (parseInt(taskItem.getAttribute('data-id'), 10) !== null) {
+    Task.TaskObject.forEach((obj) => {
+      if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
+        obj.description = editDescription;
+      }
+      localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+    });
+  }
+};
+
 /* eslint-disable */
-export { Task, addTask, removeTask, checkLocalStorage };
+export { Task, addTask, removeTask, checkLocalStorage, editTask };
 /* eslint-enable */
