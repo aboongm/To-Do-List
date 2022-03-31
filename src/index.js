@@ -9,7 +9,7 @@ import {
   displayContent,
 } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
-import { completed } from './module/checkbox.js';
+import { completed, clearCompletedTasks } from './module/checkbox.js';
 
 // add task from submit
 Elements.submitInput.addEventListener('click', addTask);

@@ -1,4 +1,5 @@
 import Task from './Task.js';
+import { displayContent, reorderTaskObjectId } from './utilityFunctions.js';
 
 const completed = (item) => {
   const completedId = parseInt(item.getAttribute('data-id'), 10);
@@ -7,12 +8,11 @@ const completed = (item) => {
   isChecked = Task.TaskObject[completedId].completed;
 };
 
-const completedTasks = (target) => {
+const clearCompletedTasks = (target) => {
   if (target) {
     let notCompletedTasks = Task.TaskObject.filter((item, index) => {
       return item.completed === false;
     });
-
     Task.TaskObject = notCompletedTasks;
     reorderTaskObjectId(Task.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
@@ -20,4 +20,4 @@ const completedTasks = (target) => {
   }
 };
 
-export { completed };
+export { completed, clearCompletedTasks };
