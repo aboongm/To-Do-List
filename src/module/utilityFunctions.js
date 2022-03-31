@@ -51,7 +51,7 @@ const removeTask = (element) => {
 const editTask = (target) => {
   const taskItem = target.parentElement.parentElement.parentElement;
   const editDescription = target.innerText;
-  if (parseInt(taskItem.getAttribute('data-id'), 10) !== null) {
+  if (parseInt(taskItem.getAttribute('data-id'), 10)) {
     Task.TaskObject.forEach((obj) => {
       if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
         obj.description = editDescription;
@@ -65,6 +65,7 @@ export {
   Task,
   displayContent,
   addTask,
+  reorderTaskObjectId,
   removeTask,
   checkLocalStorage,
   editTask,

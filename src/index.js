@@ -2,6 +2,7 @@ import './styles/style.css';
 import {
   Task,
   addTask,
+  reorderTaskObjectId,
   removeTask,
   checkLocalStorage,
   editTask,
@@ -92,6 +93,7 @@ document.addEventListener('click', (e) => {
     });
 
     Task.TaskObject = notCompletedTasks;
+    reorderTaskObjectId(Task.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
     displayContent();
   }
