@@ -43,3 +43,11 @@ input:focus {
 span:focus {
   outline: none;
 }
+
+/* input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+} */
+
+input[type='checkbox']:checked + label.strikethrough {
+  text-decoration: line-through;
+}
