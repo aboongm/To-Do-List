@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background: white;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\n.icon {\n  background-color: transparent;\n  border: 0;\n  color: #1d1d1d;\n  cursor: pointer;\n  font-size: 20px;\n}\n\n.m-width {\n  width: 90%;\n}\n\n.hide {\n  display: none;\n}\n\n.bg-yellow {\n  background-color: #fffec4;\n}\n\ninput:focus {\n  outline: none;\n}\n\nspan:focus {\n  outline: none;\n}\n\n/* input[type=checkbox]:checked + label.strikethrough{\n  text-decoration: line-through;\n} */\ninput[type=checkbox]:checked + label.description {\n  text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,6BAAA;EACA,SAAA;EACA,cAAA;EACA,eAAA;EACA,eAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,yBAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;;GAAA;AAIA;EACE,6BAAA;AAAF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: white;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\n.icon {\r\n  background-color: transparent;\r\n  border: 0;\r\n  color: rgb(29, 29, 29);\r\n  cursor: pointer;\r\n  font-size: 20px;\r\n}\r\n\r\n.m-width {\r\n  width: 90%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.bg-yellow {\r\n  background-color: rgb(255, 254, 196);\r\n}\r\n\r\ninput:focus {\r\n  outline: none;\r\n}\r\n\r\nspan:focus {\r\n  outline: none;\r\n}\r\n\r\n/* input[type=checkbox]:checked + label.strikethrough{\r\n  text-decoration: line-through;\r\n} */\r\n\r\ninput[type='checkbox']:checked + label.description {\r\n  text-decoration: line-through;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background: white;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\n.icon {\n  background-color: transparent;\n  border: 0;\n  color: #1d1d1d;\n  cursor: pointer;\n  font-size: 20px;\n}\n\n.m-width {\n  width: 90%;\n}\n\n.hide {\n  display: none;\n}\n\n.bg-yellow {\n  background-color: #fffec4;\n}\n\ninput:focus {\n  outline: none;\n}\n\nspan:focus {\n  outline: none;\n}\n\n/* input[type=checkbox]:checked + label.strikethrough{\n  text-decoration: line-through;\n} */\ninput[type=checkbox]:checked + label.strikethrough {\n  text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,6BAAA;EACA,SAAA;EACA,cAAA;EACA,eAAA;EACA,eAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,yBAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;;GAAA;AAIA;EACE,6BAAA;AAAF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: white;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\n.icon {\r\n  background-color: transparent;\r\n  border: 0;\r\n  color: rgb(29, 29, 29);\r\n  cursor: pointer;\r\n  font-size: 20px;\r\n}\r\n\r\n.m-width {\r\n  width: 90%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.bg-yellow {\r\n  background-color: rgb(255, 254, 196);\r\n}\r\n\r\ninput:focus {\r\n  outline: none;\r\n}\r\n\r\nspan:focus {\r\n  outline: none;\r\n}\r\n\r\n/* input[type=checkbox]:checked + label.strikethrough{\r\n  text-decoration: line-through;\r\n} */\r\n\r\ninput[type='checkbox']:checked + label.strikethrough {\r\n  text-decoration: line-through;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -580,6 +580,7 @@ class Task {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkboxes": () => (/* binding */ checkboxes),
 /* harmony export */   "clearCompletedTasks": () => (/* binding */ clearCompletedTasks),
 /* harmony export */   "refreshTask": () => (/* binding */ refreshTask),
 /* harmony export */   "submitInput": () => (/* binding */ submitInput),
@@ -593,6 +594,7 @@ const taskInput = document.querySelector('#task');
 const submitInput = document.querySelector('#arrow-submit');
 const taskList = document.querySelector('#taskList');
 const clearCompletedTasks = document.querySelector('#clear-completed');
+const checkboxes = document.querySelectorAll('input[name=checkbox]');
 
 const threeDots = document.querySelector('.three-dots');
 const trash = document.querySelector('.trash');
@@ -628,8 +630,8 @@ const displayContent = () => {
     _constElements_js__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
-                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault checked">                
-                <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
+                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault" >                
+                <label class="strikethrough form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
                   <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
                 </label>
               </div>
@@ -769,8 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* eslint-disable */
-/* eslint-enable */
+console.log('checking');
 
 _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.submitInput.addEventListener('click', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.addTask);
 
@@ -838,10 +839,21 @@ document.addEventListener('click', (e) => {
   });
 });
 
+// const checkbox = document.querySelector('input[type=checkbox]');
+const checkbox = document.querySelector('input[id=flexCheckDefault]');
+
+// checkbox.addEventListener('change', function () {
+//   // if (this.checked) {
+//   //   console.log('Checkbox is checked..');
+//   // } else {
+//   //   console.log('Checkbox is not checked..');
+//   // }
+// });
+
 document.addEventListener('DOMContentLoaded', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.checkLocalStorage);
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlec8c7b7b5dd8adc40cc20.js.map
+//# sourceMappingURL=bundlea7e3314e04e27dba55d0.js.map
