@@ -10,7 +10,7 @@ const displayContent = () => {
                 <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault" >                
                 <label class="strikethrough form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
                 </label>
-                <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
+                <span class="description h5 m-0 p-3" contenteditable=true>${obj.description}</span>
               </div>
               <button class="three-dots h5 btn m-0 icon">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
