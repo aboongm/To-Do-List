@@ -10,9 +10,9 @@ const completed = (item) => {
 
 const clearCompletedTasks = (target) => {
   if (target) {
-    let notCompletedTasks = Task.TaskObject.filter((item, index) => {
-      return item.completed === false;
-    });
+    const notCompletedTasks = Task.TaskObject.filter(
+      (item) => item.completed === false,
+    );
     Task.TaskObject = notCompletedTasks;
     reorderTaskObjectId(Task.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));

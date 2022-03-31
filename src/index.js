@@ -2,11 +2,9 @@ import './styles/style.css';
 import {
   Task,
   addTask,
-  reorderTaskObjectId,
   removeTask,
   checkLocalStorage,
   editTask,
-  displayContent,
 } from './module/utilityFunctions.js';
 import * as Elements from './module/constElements.js';
 import { completed, clearCompletedTasks } from './module/checkbox.js';
@@ -61,8 +59,8 @@ Elements.taskList.addEventListener('click', (e) => {
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
     if (
-      !targetItem.classList.contains('bg-yellow') &&
-      descriptionItem === e.target
+      !targetItem.classList.contains('bg-yellow')
+      && descriptionItem === e.target
     ) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
