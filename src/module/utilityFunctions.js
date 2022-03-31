@@ -7,10 +7,10 @@ const displayContent = () => {
     Elements.taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
-                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault checked">                
-                <label class="form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
-                  <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
+                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault" >                
+                <label class="strikethrough form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
                 </label>
+                <span class="description h5 m-0 p-3" contenteditable=true>${obj.description}</span>
               </div>
               <button class="three-dots h5 btn m-0 icon">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -48,10 +48,10 @@ const removeTask = (element) => {
   checkLocalStorage();
 };
 
-const editTask = (target) => {
-  const taskItem = target.parentElement.parentElement.parentElement;
-  const editDescription = target.innerText;
-  if (parseInt(taskItem.getAttribute('data-id'), 10) !== null) {
+const editTask = (item) => {
+  const taskItem = item.parentElement.parentElement;
+  const editDescription = item.innerText;
+  if (parseInt(taskItem.getAttribute('data-id'), 10) >= 0) {
     Task.TaskObject.forEach((obj) => {
       if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
         obj.description = editDescription;
@@ -65,6 +65,7 @@ export {
   Task,
   displayContent,
   addTask,
+  reorderTaskObjectId,
   removeTask,
   checkLocalStorage,
   editTask,
