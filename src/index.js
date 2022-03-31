@@ -57,7 +57,7 @@ Elements.taskList.addEventListener('click', (e) => {
     }
 
     // click on description applies styles on the task ui
-    const descriptionItem = item.children[0].children[1].children[0];
+    const descriptionItem = item.children[0].children[2];
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
     if (
@@ -73,6 +73,7 @@ Elements.taskList.addEventListener('click', (e) => {
     completed(item);
   });
 
+  // edit the task
   editTask(e.target);
 });
 
@@ -87,16 +88,7 @@ document.addEventListener('click', (e) => {
   });
 
   // clear all checked checkboxes
-  if (e.target) {
-    let notCompletedTasks = Task.TaskObject.filter((item, index) => {
-      return item.completed === false;
-    });
-
-    Task.TaskObject = notCompletedTasks;
-    reorderTaskObjectId(Task.TaskObject);
-    localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
-    displayContent();
-  }
+  clearCompletedTasks(e.target);
 });
 
 document.addEventListener('DOMContentLoaded', checkLocalStorage);
