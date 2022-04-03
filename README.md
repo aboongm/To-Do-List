@@ -7,11 +7,11 @@ This is a web site for to do list.
 # Screen Shots
 ## Desktop Version
 
-![screenshot](assets/desktop.png)
+![desktop](https://user-images.githubusercontent.com/49184579/161413491-98c037d3-d1e5-481f-a0b5-dfcf70089cb5.png)
 
 ## Mobile Version
 
-![screenshot](assets/mobile.png)
+![mobile](https://user-images.githubusercontent.com/49184579/161413488-5f113e0e-e1d8-40cb-99d3-d4996c66ee99.png)
 
 ## Built With &hearts;
 
