@@ -5,14 +5,13 @@
 This is a web site for to do list.
 
 # Screen Shots
-
 ## Desktop Version
 
-> Comming Soon.
+![screenshot](assets/desktop.png)
 
 ## Mobile Version
 
-> Comming Soon.
+![screenshot](assets/mobile.png)
 
 ## Built With &hearts;
 
@@ -25,6 +24,11 @@ This is a web site for to do list.
 
 [Ckeckout The live Site here](https://aboongm.github.io/To-Do-List/)
 
+### Prerequisites
+- Good knowledge on javascript objects
+- VSCode or other text editor installed. [Link to download VSCode](https://code.visualstudio.com/download)
+- Node package. [Link to download node](https://nodejs.org/en/download/)
+  
 ## Getting started
 
 to run the project locally, clone the project using the command
