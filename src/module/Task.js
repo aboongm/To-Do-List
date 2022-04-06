@@ -16,11 +16,8 @@ class Task {
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
   }
 
-  remove(element) {
-    if (element.classList.contains('taskDynamic')) {
-      element.remove();
-      this.TaskObject.splice(element.getAttribute('data-id'), 1);
-    }
+  remove(index) {
+    this.TaskObject.splice(index, 1);
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
   }
 }

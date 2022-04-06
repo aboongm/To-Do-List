@@ -1,11 +1,9 @@
 import Task from './Task.js';
-import { displayContent, reorderTaskObjectId } from './utilityFunctions.js';
+import { reorderTaskObjectId } from './utilityFunctions.js';
 
-const completed = (item) => {
-  const completedId = parseInt(item.getAttribute('data-id'), 10);
-  let isChecked = item.children[0].children[0].checked;
-  Task.TaskObject[completedId].completed = isChecked;
-  isChecked = Task.TaskObject[completedId].completed;
+const completed = (index, checkStatus) => {
+  Task.TaskObject[index].completed = checkStatus;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
 };
 
 const clearCompletedTasks = (target) => {
@@ -16,8 +14,12 @@ const clearCompletedTasks = (target) => {
     Task.TaskObject = notCompletedTasks;
     reorderTaskObjectId(Task.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
-    displayContent();
   }
 };
 
-export { completed, clearCompletedTasks };
+const editTask = (value, index) => {
+  Task.TaskObject[index].description = value;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+};
+
+export { completed, clearCompletedTasks, editTask };
