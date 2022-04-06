@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background: white;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\n.icon {\n  background-color: transparent;\n  border: 0;\n  color: #1d1d1d;\n  cursor: pointer;\n  font-size: 20px;\n}\n\n.m-width {\n  width: 90%;\n}\n\n.hide {\n  display: none;\n}\n\n.bg-yellow {\n  background-color: #fffec4;\n}\n\ninput:focus {\n  outline: none;\n}\n\nspan:focus {\n  outline: none;\n}\n\n/* input[type='checkbox']:checked + label.strikethrough {\n  text-decoration: line-through;\n} */\n/* \ninput[type='checkbox']:checked + label.strikethrough {\n  text-decoration: line-through;\n} */", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,6BAAA;EACA,SAAA;EACA,cAAA;EACA,eAAA;EACA,eAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,yBAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;;GAAA;AAGA;;;GAAA","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: white;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\n.icon {\r\n  background-color: transparent;\r\n  border: 0;\r\n  color: rgb(29, 29, 29);\r\n  cursor: pointer;\r\n  font-size: 20px;\r\n}\r\n\r\n.m-width {\r\n  width: 90%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.bg-yellow {\r\n  background-color: rgb(255, 254, 196);\r\n}\r\n\r\ninput:focus {\r\n  outline: none;\r\n}\r\n\r\nspan:focus {\r\n  outline: none;\r\n}\r\n\r\n/* input[type='checkbox']:checked + label.strikethrough {\r\n  text-decoration: line-through;\r\n} */\r\n/* \r\ninput[type='checkbox']:checked + label.strikethrough {\r\n  text-decoration: line-through;\r\n} */\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background: white;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\n.icon {\n  background-color: transparent;\n  border: 0;\n  color: #1d1d1d;\n  cursor: pointer;\n  font-size: 20px;\n}\n\n.m-width {\n  width: 90%;\n}\n\n.hide {\n  display: none;\n}\n\n.bg-yellow {\n  background-color: #fffec4;\n}\n\ninput:focus {\n  outline: none;\n}\n\nspan:focus {\n  outline: none;\n}\n\n.description {\n  background-color: transparent;\n  outline: none;\n  border: none;\n  margin-left: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,6BAAA;EACA,SAAA;EACA,cAAA;EACA,eAAA;EACA,eAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,yBAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,aAAA;AACF;;AAEA;EACE,6BAAA;EACA,aAAA;EACA,YAAA;EACA,iBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: white;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\n.icon {\r\n  background-color: transparent;\r\n  border: 0;\r\n  color: rgb(29, 29, 29);\r\n  cursor: pointer;\r\n  font-size: 20px;\r\n}\r\n\r\n.m-width {\r\n  width: 90%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.bg-yellow {\r\n  background-color: rgb(255, 254, 196);\r\n}\r\n\r\ninput:focus {\r\n  outline: none;\r\n}\r\n\r\nspan:focus {\r\n  outline: none;\r\n}\r\n\r\n.description {\r\n  background-color: transparent;\r\n  outline: none;\r\n  border: none;\r\n  margin-left: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -558,11 +558,8 @@ class Task {
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
   }
 
-  remove(element) {
-    if (element.classList.contains('taskDynamic')) {
-      element.remove();
-      this.TaskObject.splice(element.getAttribute('data-id'), 1);
-    }
+  remove(index) {
+    this.TaskObject.splice(index, 1);
     localStorage.setItem('TASKS_LIST', JSON.stringify(this.TaskObject));
   }
 }
@@ -581,30 +578,33 @@ class Task {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "clearCompletedTasks": () => (/* binding */ clearCompletedTasks),
-/* harmony export */   "completed": () => (/* binding */ completed)
+/* harmony export */   "completed": () => (/* binding */ completed),
+/* harmony export */   "editTask": () => (/* binding */ editTask)
 /* harmony export */ });
 /* harmony import */ var _Task_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Task.js */ "./src/module/Task.js");
 /* harmony import */ var _utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utilityFunctions.js */ "./src/module/utilityFunctions.js");
 
 
 
-const completed = (item) => {
-  const completedId = parseInt(item.getAttribute('data-id'), 10);
-  let isChecked = item.children[0].children[0].checked;
-  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject[completedId].completed = isChecked;
-  isChecked = _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject[completedId].completed;
+const completed = (index, checkStatus) => {
+  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject[index].completed = checkStatus;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
 };
 
 const clearCompletedTasks = (target) => {
   if (target) {
     const notCompletedTasks = _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject.filter(
-      (item) => item.completed === false
+      (item) => item.completed === false,
     );
     _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject = notCompletedTasks;
     (0,_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.reorderTaskObjectId)(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
-    (0,_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.displayContent)();
   }
+};
+
+const editTask = (value, index) => {
+  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject[index].description = value;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
 };
 
 
@@ -620,6 +620,7 @@ const clearCompletedTasks = (target) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clear": () => (/* binding */ clear),
 /* harmony export */   "refreshTask": () => (/* binding */ refreshTask),
 /* harmony export */   "submitInput": () => (/* binding */ submitInput),
 /* harmony export */   "taskInput": () => (/* binding */ taskInput),
@@ -631,10 +632,10 @@ const refreshTask = document.querySelector('#refresh');
 const taskInput = document.querySelector('#task');
 const submitInput = document.querySelector('#arrow-submit');
 const taskList = document.querySelector('#taskList');
-// const clearCompletedTasks = document.querySelector('#clear-completed');
 
 const threeDots = document.querySelector('.three-dots');
 const trash = document.querySelector('.trash');
+const clear = document.querySelector('#clear-completed');
 
 
 
@@ -653,7 +654,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "addTask": () => (/* binding */ addTask),
 /* harmony export */   "checkLocalStorage": () => (/* binding */ checkLocalStorage),
 /* harmony export */   "displayContent": () => (/* binding */ displayContent),
-/* harmony export */   "editTask": () => (/* binding */ editTask),
 /* harmony export */   "removeTask": () => (/* binding */ removeTask),
 /* harmony export */   "reorderTaskObjectId": () => (/* binding */ reorderTaskObjectId)
 /* harmony export */ });
@@ -668,17 +668,13 @@ const displayContent = () => {
     _constElements_js__WEBPACK_IMPORTED_MODULE_1__.taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
-                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault" >                
-                <label class="strikethrough form-check-label p-3 m-0 d-flex align-items-center justify-content-start" for="flexCheckDefault">
-                </label>
-                <span class="description h5 m-0 p-0" contenteditable=true>${obj.description}</span>
+                <input class="form-check-input border checkbox" type="checkbox" value="" id="flexCheckDefault" >
+                <input type='text' class="description h5 m-0 p-3" value="${obj.description}"></input>
               </div>
               <button class="three-dots h5 btn m-0 icon">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </button>
-              <button class="trash h5 btn m-0 icon hide">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
+              <i class="trash fa-solid fa-trash-can hide"></i>              
             </div>
       `;
   });
@@ -703,25 +699,15 @@ const reorderTaskObjectId = (obj) => {
 };
 
 const removeTask = (element) => {
-  _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].remove(element);
-  reorderTaskObjectId(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject);
-  localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
-  checkLocalStorage();
-};
-
-const editTask = (item) => {
-  const taskItem = item.parentElement.parentElement;
-  const editDescription = item.innerText;
-  if (parseInt(taskItem.getAttribute('data-id'), 10) >= 0) {
-    _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject.forEach((obj) => {
-      if (obj.id === parseInt(taskItem.getAttribute('data-id'), 10)) {
-        obj.description = editDescription;
-      }
-      localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
-    });
+  const i = parseInt(element.getAttribute('data-id'), 10);
+  if (element.classList.contains('taskDynamic')) {
+    element.remove();
+    _Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].remove(i);
+    reorderTaskObjectId(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject);
+    localStorage.setItem('TASKS_LIST', JSON.stringify(_Task_js__WEBPACK_IMPORTED_MODULE_0__["default"].TaskObject));
+    checkLocalStorage();
   }
 };
-
 
 
 
@@ -832,7 +818,7 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.refreshTask.addEventListen
 
 // tasklist functionalities
 _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener('click', (e) => {
-  e.stopPropagation();
+  // e.stopPropagation();
 
   [..._module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.children].forEach((item, index) => {
     // all tasks to default ui
@@ -846,35 +832,61 @@ _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.taskList.addEventListener(
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
-      item.children[2].addEventListener('click', (e) => {
-        e.preventDefault();
-        if (item.children[2].children[0] === e.target) {
-          (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.removeTask)(e.target.parentElement.parentElement);
-        } else {
-          (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.removeTask)(e.target.parentElement);
-        }
-      });
     }
 
     // click on description applies styles on the task ui
-    const descriptionItem = item.children[0].children[2];
+    const descriptionItem = item.children[0].children[1];
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
-    if (
-      !targetItem.classList.contains('bg-yellow') &&
-      descriptionItem === e.target
-    ) {
-      item.children[1].classList.add('hide');
-      item.children[2].classList.remove('hide');
-      item.classList.add('bg-yellow');
+    if (targetItem) {
+      if (
+        !targetItem.classList.contains('bg-yellow')
+        && descriptionItem === e.target
+      ) {
+        item.children[1].classList.add('hide');
+        item.children[2].classList.remove('hide');
+        item.classList.add('bg-yellow');
+        descriptionItem.classList.add('bg-yellow');
+      }
     }
 
     // update the check checkbox to local storage
-    (0,_module_checkbox_js__WEBPACK_IMPORTED_MODULE_3__.completed)(item);
+    const checkStatus = item.firstElementChild.firstElementChild.checked;
+    if (
+      index
+      === parseInt(e.target.parentElement.parentElement.getAttribute('data-id'), 10)
+    ) {
+      (0,_module_checkbox_js__WEBPACK_IMPORTED_MODULE_3__.completed)(index, checkStatus);
+    }
+  });
+
+  const trash = document.querySelectorAll('.trash');
+  trash.forEach((deleteBtn, trashInd) => {
+    deleteBtn.addEventListener('click', (e1) => {
+      e1.stopPropagation();
+      // e.preventDefault();
+      const targetId = e1.target.parentElement;
+      if (parseInt(targetId.getAttribute('data-id'), 10) === trashInd) {
+        (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.removeTask)(e1.target.parentElement);
+      }
+    });
   });
 
   // edit the task
-  (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.editTask)(e.target);
+  const taskDescription = document.querySelectorAll('.description');
+  taskDescription.forEach((description, index) => {
+    if (
+      index
+      === parseInt(
+        description.parentElement.parentElement.getAttribute('data-id'),
+        10,
+      )
+    ) {
+      description.addEventListener('input', (e) => {
+        (0,_module_checkbox_js__WEBPACK_IMPORTED_MODULE_3__.editTask)(e.target.value, index);
+      });
+    }
+  });
 });
 
 document.addEventListener('click', (e) => {
@@ -887,8 +899,11 @@ document.addEventListener('click', (e) => {
     }
   });
 
-  // clear all checked checkboxes
-  (0,_module_checkbox_js__WEBPACK_IMPORTED_MODULE_3__.clearCompletedTasks)(e.target);
+  // // clear all checked checkboxes
+  _module_constElements_js__WEBPACK_IMPORTED_MODULE_2__.clear.addEventListener('click', (e) => {
+    (0,_module_checkbox_js__WEBPACK_IMPORTED_MODULE_3__.clearCompletedTasks)(e.target);
+    (0,_module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.displayContent)();
+  });
 });
 
 document.addEventListener('DOMContentLoaded', _module_utilityFunctions_js__WEBPACK_IMPORTED_MODULE_1__.checkLocalStorage);
@@ -897,4 +912,4 @@ document.addEventListener('DOMContentLoaded', _module_utilityFunctions_js__WEBPA
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle9dbac77fffc8e70cc2b1.js.map
+//# sourceMappingURL=bundleb9aa0f86e92630a3fcad.js.map
