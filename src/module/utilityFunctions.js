@@ -1,12 +1,12 @@
 import Task from './Task.js';
-import * as Elements from './constElements.js';
+import { taskInput, taskList } from './constElements.js';
 
 const Tasks = new Task();
 
 const displayContent = () => {
-  Elements.taskList.innerHTML = '';
+  // taskList.innerHTML = '';
   Tasks.TaskObject.forEach((obj) => {
-    Elements.taskList.innerHTML += `
+    taskList.innerHTML += `
       <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=${obj.id}>
               <div class="form-check mb-0 d-flex align-items-center justify-content-start">
                 <input class="form-check-input border checkbox" type="checkbox" value="" id="flexCheckDefault" >
@@ -19,18 +19,21 @@ const displayContent = () => {
             </div>
       `;
   });
+  // window.location.reload();
 };
 
 const checkLocalStorage = () => {
   if (JSON.parse(localStorage.getItem('TASKS_LIST')) != null) {
     Tasks.TaskObject = JSON.parse(localStorage.getItem('TASKS_LIST'));
-    displayContent();
+    // displayContent();
   }
 };
 
 const addTask = () => {
-  Tasks.add(Elements.taskInput);
-  checkLocalStorage();
+  Tasks.add(taskInput);
+  // checkLocalStorage();
+  displayContent();
+  document.location.reload();
 };
 
 const reorderTaskObjectId = (obj) => {
@@ -46,7 +49,8 @@ const removeTask = (element) => {
     Tasks.remove(i);
     reorderTaskObjectId(Tasks.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
-    checkLocalStorage();
+    // displayContent();
+    document.location.reload();
   }
 };
 
