@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/aboongm/To-Do-List#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
@@ -26,6 +28,7 @@
     "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.10",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

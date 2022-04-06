@@ -1,6 +1,6 @@
 import './styles/style.css';
 import {
-  Task,
+  Tasks,
   addTask,
   removeTask,
   checkLocalStorage,
@@ -23,8 +23,8 @@ Elements.taskInput.addEventListener('keypress', (event) => {
 // clear all task
 Elements.refreshTask.addEventListener('click', (e) => {
   e.preventDefault();
-  Task.TaskObject = [];
-  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  Tasks.TaskObject = [];
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
   checkLocalStorage();
 });
 

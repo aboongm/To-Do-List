@@ -1,25 +1,24 @@
-import Task from './Task.js';
-import { reorderTaskObjectId } from './utilityFunctions.js';
+import { Tasks, reorderTaskObjectId } from './utilityFunctions.js';
 
 const completed = (index, checkStatus) => {
-  Task.TaskObject[index].completed = checkStatus;
-  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  Tasks.TaskObject[index].completed = checkStatus;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
 };
 
 const clearCompletedTasks = (target) => {
   if (target) {
-    const notCompletedTasks = Task.TaskObject.filter(
+    const notCompletedTasks = Tasks.TaskObject.filter(
       (item) => item.completed === false,
     );
-    Task.TaskObject = notCompletedTasks;
-    reorderTaskObjectId(Task.TaskObject);
-    localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+    Tasks.TaskObject = notCompletedTasks;
+    reorderTaskObjectId(Tasks.TaskObject);
+    localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
   }
 };
 
 const editTask = (value, index) => {
-  Task.TaskObject[index].description = value;
-  localStorage.setItem('TASKS_LIST', JSON.stringify(Task.TaskObject));
+  Tasks.TaskObject[index].description = value;
+  localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
 };
 
 export { completed, clearCompletedTasks, editTask };
