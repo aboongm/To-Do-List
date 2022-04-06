@@ -16,10 +16,8 @@ import {
 
 import { completed, clearCompletedTasks, editTask } from './module/checkbox.js';
 
-// add task from submit
 submitInput.addEventListener('click', addTask);
 
-// add task by pressing Enter Key
 taskInput.addEventListener('keypress', (event) => {
   if (event.keyCode === 13) {
     event.preventDefault();
@@ -27,7 +25,6 @@ taskInput.addEventListener('keypress', (event) => {
   }
 });
 
-// clear all task
 refreshTask.addEventListener('click', (e) => {
   e.preventDefault();
   Tasks.TaskObject = [];
@@ -35,25 +32,20 @@ refreshTask.addEventListener('click', (e) => {
   displayContent();
 });
 
-// tasklist functionalities
 taskList.addEventListener('click', (e) => {
-  // e.stopPropagation();
-
   [...taskList.children].forEach((item, index) => {
-    // all tasks to default ui
     if (item.classList.contains('bg-yellow')) {
       item.children[1].classList.remove('hide');
       item.children[2].classList.add('hide');
       item.classList.remove('bg-yellow');
     }
-    // selected task applied styles
+
     if (index === parseInt(e.target.getAttribute('data-id'), 10)) {
       item.children[1].classList.add('hide');
       item.children[2].classList.remove('hide');
       item.classList.add('bg-yellow');
     }
 
-    // click on description applies styles on the task ui
     const descriptionItem = item.children[0].children[1];
     const targetItem = e.target.parentElement.parentElement.parentElement;
 
@@ -69,7 +61,6 @@ taskList.addEventListener('click', (e) => {
       }
     }
 
-    // update the check checkbox to local storage
     const checkStatus = item.firstElementChild.firstElementChild.checked;
     if (
       index
@@ -83,7 +74,6 @@ taskList.addEventListener('click', (e) => {
   trash.forEach((deleteBtn, trashInd) => {
     deleteBtn.addEventListener('click', (e1) => {
       e1.stopPropagation();
-      // e.preventDefault();
       const targetId = e1.target.parentElement;
       if (parseInt(targetId.getAttribute('data-id'), 10) === trashInd) {
         removeTask(e1.target.parentElement);
@@ -91,7 +81,6 @@ taskList.addEventListener('click', (e) => {
     });
   });
 
-  // edit the task
   const taskDescription = document.querySelectorAll('.description');
   taskDescription.forEach((description, index) => {
     if (
@@ -118,7 +107,6 @@ document.addEventListener('click', (e) => {
     }
   });
 
-  // // clear all checked checkboxes
   clear.addEventListener('click', (e) => {
     clearCompletedTasks(e.target);
     displayContent();
