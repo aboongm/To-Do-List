@@ -27,8 +27,10 @@ describe('Test add and displayContent method, and local storage', () => {
 
 describe('Test removeTask method, and local storage', () => {
   window.localStorage = Storage.prototype;
+
   test('remove task', () => {
     Tasks.add('Test2');
+
     document.body.innerHTML = `
     <div id="taskList" class="h5 p-0 m-0">
         <div class="taskDynamic border-bottom  m-0 px-3 py-0 d-flex align-items-center justify-content-between" data-id=1>
@@ -48,6 +50,7 @@ describe('Test removeTask method, and local storage', () => {
     Tasks.remove(1);
     expect(Tasks.TaskObject).toHaveLength(1);
   });
+
   test('test for local storage', () => {
     JSON.parse(localStorage.getItem('TASKS_LIST'));
     expect(localStorage).toHaveLength(1);
