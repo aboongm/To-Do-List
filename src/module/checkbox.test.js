@@ -17,10 +17,10 @@ describe('Test completed, clearCompletedTask and editTask methods', () => {
   };
 
   // mock editTask function
-  // const editTask = (value, index) => {
-  //   Tasks.TaskObject[index].description = value;
-  //   localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
-  // };
+  const editTask = (value, index) => {
+    Tasks.TaskObject[index].description = value;
+    localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
+  };
 
   // mock DOM
   document.body.innerHTML = `
@@ -84,5 +84,12 @@ describe('Test completed, clearCompletedTask and editTask methods', () => {
     updateCompleted(1, true);
     expect(Tasks.TaskObject[0].completed).toBe(box1.checked);
     expect(Tasks.TaskObject[1].completed).toBe(box2.checked);
+  });
+
+  test('test edit task function', () => {
+    // mocked value
+    const value = 'task 2 edited';
+    // edit task1 with function call
+    editTask(value, 1);
   });
 });
