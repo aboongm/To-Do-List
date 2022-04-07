@@ -62,7 +62,7 @@ describe('Test completed, clearCompletedTask and editTask methods', () => {
   const box1 = document.querySelector('.checkbox1');
   const box2 = document.querySelector('.checkbox2');
 
-  // const clear = document.querySelector('#clear-completed');
+  const clear = document.querySelector('#clear-completed');
 
   test('add 2 tasks', () => {
     // adding tasks - task1 and task2
@@ -91,5 +91,44 @@ describe('Test completed, clearCompletedTask and editTask methods', () => {
     const value = 'task 2 edited';
     // edit task1 with function call
     editTask(value, 1);
+  });
+
+  // mock event obj for clearCompletedTasks
+  const obj = {
+    init() {
+      clear.addEventListener('click', () => {
+        this.clearCompletedTasks();
+      });
+    },
+    clearCompletedTasks() {
+      const notCompletedTasks = Tasks.TaskObject.filter(
+        (item) => item.completed === false,
+      );
+      Tasks.TaskObject = notCompletedTasks;
+      localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
+    },
+  };
+
+  test('It should pass', () => {
+    // update completed property of task1 as true and task2 as false
+    updateCompleted(0, true);
+    updateCompleted(1, false);
+    const instanceMock = jest.spyOn(obj, 'clearCompletedTasks');
+    clear.addEventListener = jest
+      .fn()
+      .mockImplementationOnce((event, callback) => {
+        callback();
+      });
+    obj.init();
+    expect(clear.addEventListener).toBeCalledWith(
+      'click',
+      expect.any(Function),
+    );
+    expect(instanceMock).toBeCalledTimes(1);
+  });
+
+  test('test for local storage', () => {
+    JSON.parse(localStorage.getItem('TASKS_LIST'));
+    expect(localStorage).toHaveLength(1);
   });
 });
