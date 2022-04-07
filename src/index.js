@@ -55,8 +55,8 @@ taskList.addEventListener('click', (e) => {
 
     if (targetItem) {
       if (
-        !targetItem.classList.contains('bg-yellow') &&
-        descriptionItem === e.target
+        !targetItem.classList.contains('bg-yellow')
+        && descriptionItem === e.target
       ) {
         item.children[1].classList.add('hide');
         item.children[2].classList.remove('hide');
@@ -88,10 +88,10 @@ taskList.addEventListener('click', (e) => {
   const taskDescription = document.querySelectorAll('.description');
   taskDescription.forEach((description, index) => {
     if (
-      index ===
-      parseInt(
+      index
+      === parseInt(
         description.parentElement.parentElement.getAttribute('data-id'),
-        10
+        10,
       )
     ) {
       description.addEventListener('input', (e) => {
