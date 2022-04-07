@@ -45,7 +45,7 @@ const removeTask = (element) => {
     Tasks.remove(i);
     reorderTaskObjectId(Tasks.TaskObject);
     localStorage.setItem('TASKS_LIST', JSON.stringify(Tasks.TaskObject));
-    document.location.reload();
+    // document.location.reload();
   }
 };
 

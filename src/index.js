@@ -14,7 +14,11 @@ import {
   clear,
 } from './module/constElements.js';
 
-import { completed, clearCompletedTasks, editTask } from './module/checkbox.js';
+import {
+  updateCompleted,
+  clearCompletedTasks,
+  editTask,
+} from './module/checkbox.js';
 
 submitInput.addEventListener('click', addTask);
 
@@ -61,13 +65,21 @@ taskList.addEventListener('click', (e) => {
       }
     }
 
-    const checkStatus = item.firstElementChild.firstElementChild.checked;
-    if (
-      index
-      === parseInt(e.target.parentElement.parentElement.getAttribute('data-id'), 10)
-    ) {
-      completed(index, checkStatus);
-    }
+    // const checkStatus = item.firstElementChild.firstElementChild.checked;
+    // if (
+    //   index ===
+    //   parseInt(e.target.parentElement.parentElement.getAttribute('data-id'), 10)
+    // ) {
+    //   updateCompleted(index, checkStatus);
+    // }
+  });
+
+  const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((box, index) => {
+    box.addEventListener('change', () => {
+      const checkStatus = box.checked;
+      updateCompleted(index, checkStatus);
+    });
   });
 
   const trash = document.querySelectorAll('.trash');
@@ -107,9 +119,9 @@ document.addEventListener('click', (e) => {
     }
   });
 
-  clear.addEventListener('click', (e) => {
-    clearCompletedTasks(e.target);
-    displayContent();
+  clear.addEventListener('click', () => {
+    clearCompletedTasks();
+    window.location.reload();
   });
 });
 
